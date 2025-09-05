@@ -1,18 +1,21 @@
 import { Icons, IconProps } from "@/components/icons";
+import { FiGithub } from 'react-icons/fi';
 import {
-  Database,
-  Server,
-  Boxes,
-  Terminal,
-  Cloud,
-  CreditCard,
-  Shield,
-  Layers,
-  Code2,
-  Cpu,
-  Box,
-  Sparkles,
-} from "lucide-react";
+  SiLangchain,
+  SiPytorch,
+  SiReact, SiFastapi,
+  SiGooglecloud,
+  SiTypescript,
+  SiPostgresql,
+  SiPython,
+  SiDocker,
+  SiKubernetes,
+  SiJavascript,
+  SiFlask,
+  SiHuggingface,
+} from "react-icons/si";
+import { VscAzure } from "react-icons/vsc"
+import { FaJava, FaAws } from "react-icons/fa6";
 
 export type SkillVisual = {
   color: string; // base hex color, e.g. #61dafb
@@ -20,26 +23,25 @@ export type SkillVisual = {
 };
 
 const PRESET: Record<string, SkillVisual> = {
-  React: { color: "#61DAFB", Icon: Icons.react },
-  "Next.js": { color: "#000000", Icon: Icons.nextjs },
-  "TypeScript": { color: "#3178C6", Icon: Icons.typescript },
-  Typescript: { color: "#3178C6", Icon: Icons.typescript },
-  "TailwindCSS": { color: "#38BDF8", Icon: Icons.tailwindcss },
-  "PostgreSQL": { color: "#336791", Icon: Database as any },
-  Postgres: { color: "#336791", Icon: Database as any },
-  Prisma: { color: "#0C344B", Icon: Layers as any },
-  Stripe: { color: "#635BFF", Icon: CreditCard as any },
-  "Shadcn UI": { color: "#111827", Icon: Box as any },
-  "Magic UI": { color: "#8B5CF6", Icon: Sparkles as any },
-  "Cloudflare Workers": { color: "#F38020", Icon: Cloud as any },
-  "Node.js": { color: "#43853D", Icon: Server as any },
-  Python: { color: "#3776AB", Icon: Code2 as any },
-  Go: { color: "#00ADD8", Icon: Cpu as any },
-  Docker: { color: "#2496ED", Icon: Boxes as any },
-  Kubernetes: { color: "#326CE5", Icon: Shield as any },
-  Java: { color: "#E76F00", Icon: Code2 as any },
-  "C++": { color: "#00599C", Icon: Code2 as any },
+  "Python": { color: "#3776AB", Icon: SiPython as any },        // Blue from logo
+  "React": { color: "#61DAFB", Icon: SiReact as any },          // React cyan
+  "PyTorch": { color: "#EE4C2C", Icon: SiPytorch as any },      // PyTorch orange/red
+  "FastAPI": { color: "#009688", Icon: SiFastapi as any },      // Teal-green
+  "HuggingFace": { color: "#FFB000", Icon: SiHuggingface as any }, // Yellow from mascot
+  "Flask": { color: "#000000", Icon: SiFlask as any },          // Flask is black/white
+  "Langchain": { color: "#00B171", Icon: SiLangchain as any },  // Green from branding
+  "Azure": { color: "#0078D4", Icon: VscAzure as any },         // Azure blue
+  "AWS": { color: "#FF9900", Icon: FaAws as any },              // AWS orange
+  "GCP": { color: "#4285F4", Icon: SiGooglecloud as any },      // Google blue
+  "Github": { color: "#181717", Icon: FiGithub as any },        // GitHub black
+  "TypeScript": { color: "#3178C6", Icon: SiTypescript as any },// TypeScript blue
+  "JavaScript": { color: "#F7DF1E", Icon: SiJavascript as any },// JS yellow
+  "PostgreSQL": { color: "#4169E1", Icon: SiPostgresql as any },// Royal blue
+  "Docker": { color: "#2496ED", Icon: SiDocker as any },        // Docker blue
+  "Kubernetes": { color: "#326CE5", Icon: SiKubernetes as any },// Kubernetes blue
+  "Java": { color: "#E76F00", Icon: FaJava as any },            // Java orange
 };
+
 
 const PALETTE = [
   "#f97316",
@@ -68,8 +70,8 @@ export function getSkillVisual(skill: string): SkillVisual {
 }
 
 export function hexToRgb(hex: string) {
-  const h = hex.replace('#','');
-  const bigint = parseInt(h.length === 3 ? h.split('').map(c=>c+c).join('') : h, 16);
+  const h = hex.replace('#', '');
+  const bigint = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
   const r = (bigint >> 16) & 255;
   const g = (bigint >> 8) & 255;
   const b = bigint & 255;

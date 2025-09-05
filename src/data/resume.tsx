@@ -1,71 +1,75 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Dillion Verma",
+  name: "Subhadeep Mandal",
   initials: "DV",
   url: "https://dillion.io",
-  location: "San Francisco, CA",
+  location: "Bengaluru, KA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Data Scientist and AI/ML Engineer. I love building things and helping people. Very active on Reddit.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "A self taught data scientist and machine learning engineer with a background in [Computer Science Engineering](/#education) and over 2 years of experience in the AI/ML industry. My work interests include Applied Machine and Deep Learning, Generative AI, Reinforcement Learning and MLOps. At [Genpact](https://www.genpact.com/), I am working with the AI/ML Practice team to develop cutting edge solutions leveraging Generative AI. I also engage myself in developing custom finetuned Vision, Language and Multimodal solutions for variety of usecases in Healthcare, Manufacturing, Finance and Retail. As a part of R&D I participate in [publishing our research](/#publications) work at top conferences and also patenting solutions with the core team.",
   avatarUrl: "/me.png",
   skills: [
-    "React",
-    "Next.js",
-    "Typescript",
-    "Node.js",
     "Python",
-    "Go",
-    "Postgres",
+    "React",
+    "PyTorch",
+    "FastAPI",
+    "HuggingFace",
+    "Flask",
+    "Langchain",
+    "Azure",
+    "AWS",
+    "GCP",
+    "Github",
+    "TypeScript",
+    "JavaScript",
+    "PostgreSQL",
     "Docker",
     "Kubernetes",
     "Java",
-    "C++",
   ],
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/", icon: Icons.home, label: "Home" },
+    { href: "/blog", icon: Icons.notebook, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "myself.subhadeepmandal@gmail.com",
+    tel: "+91-79971-90640",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/Subhadeep0506",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/subhadeepmandal2000/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://dub.sh/dillion-twitter",
+        url: "https://x.com/syntax_terror_",
         icon: Icons.x,
 
         navbar: true,
       },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
+      Reddit: {
+        name: "Reddit",
+        url: "https://www.reddit.com/user/Extension-Tap-7488/",
+        icon: Icons.reddit,
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:myself.subhadeepmandal@gmail.com",
         icon: Icons.email,
-
-        navbar: false,
+        navbar: true,
       },
     },
   },
