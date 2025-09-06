@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import SkillBadge from "@/components/skill-badge";
 import {
@@ -12,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { Calendar } from "lucide-react";
+import { handleCardMouseMove, handleCardMouseLeave } from "@/lib/mouse";
 
 interface Props {
   title: string;
@@ -47,6 +50,8 @@ export function ProjectCard({
       className={
         "glass-card bg-transparent p-2 flex flex-col overflow-hidden transition-all duration-300 ease-out h-full"
       }
+      onMouseMove={handleCardMouseMove}
+      onMouseLeave={handleCardMouseLeave}
     >
       <span className="glass-card-shine" aria-hidden="true" />
       <Link
@@ -60,7 +65,7 @@ export function ProjectCard({
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top rounded-lg " // needed because random black line at bottom of video
           />
         )}
         {image && (
@@ -69,7 +74,7 @@ export function ProjectCard({
             alt={title}
             width={500}
             height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
+            className="h-40 w-full overflow-hidden object-cover object-top rounded-lg"
           />
         )}
       </Link>

@@ -12,6 +12,7 @@
     "kamikillerto.vscode-colorize"
   ];
   idx.previews = {
+    enable = false;
     previews = {
       web = {
         command = [

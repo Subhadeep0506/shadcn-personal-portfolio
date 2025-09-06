@@ -76,110 +76,97 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "Genpact LLC.",
+      href: "https://www.genpact.com",
+      badges: [],
+      location: "Bengaluru, India",
+      title: "Data Scientist/AI Engineer",
+      logoUrl: "/genpact-b.png",
+      start: "January, 2024",
+      end: "PRESENT",
+      description: [
+        "Deep Learning and Generative AI R&D in Healthcare and Finance: Generated data synthetically using proprietary and open-source LLMs for fine-tuning LLMs and VLMs for finance, insurance and medical use-cases. Fine-tuned Phi 3 and Phi 3.5 using the synthetically generated datasets. Used Unsloth for faster and memory efficient fine-tuning. Evaluated the models on test-set and created comprehensive report for reference.",
+        "Multimodal Retrieval-Augmented Generation for QA Systems: Build multi-modal RAG application for question answering on documents (scanned PDFs).",
+        "Enterprise GenAI and MLOps Solutions in Healthcare and Finance: Deployed fine-tuned models on cloud services. Built consumable REST APIs serving endpoints to run inference on the deployed models.",
+        "State-of-the-Art Audio Language Frameworks Implementation: Built end-to-end plug-and-play framework and application for audio based use-cases involving summarization, sentiment analysis, insights and feedback generation. ",
+        "Developing Low Code Frameworks for Large Vision Models Fine-Tuning: Developed a library for low code fine-tuning traditional computer vision models using custom data, with minimal code. Supports image classification, segmentation, object detection, image generation and VLM fine-tuning.",
+        "Papers and patents authoring: Authored in two papers over audio use-cases for IIMB ICBAI-2024 conference. Currently focused on patenting our latest RnD solutions on Generative and multi-modal AI.",
+      ]
+    },
+    {
+      company: "Genpact LLC.",
+      badges: [],
+      href: "https://www.genpact.com",
+      location: "Bengaluru, India",
+      title: "Data Science Inern",
+      logoUrl: "/genpact-b.png",
+      start: "July, 2023",
+      end: "December, 2023",
+      description: [
+        "Developed state-of-the-art vision transformers for medical and industrial applications. Created explainable AI solutions to visualise and interpret model performance.",
+        "Designed and built a Flask web application with an HTML user interface to efficiently utilise the model and provide real-time results. Conducted experiments with MONAI Deploy SDK for model deployment in the medical domain.",
+        "Generated a comprehensive report comparing models based on key metrics such as performance, accuracy, training time, and inference time.",
+        "Explored vision-language models tailored for medical applications. ",
+        "Developed smart agent based solution with Langchain to automate Doc QnA, Source Retrieval and Summarization with RAG, as a part of Genpact's Inhouse Hackathon.",
+        "Explored few Multimodal VLMs for Visual Question Answering, focusing medical domain.",
+        "Developed model for detecting AI generated text. Developed Gradio and FastAPI based User Interface utilizing the models.",
+        "Experimented with Nvidia's RIVA framework and OOTB models for S2T, T2S and NMT tasks. Created a comprehensive report comparing performance of Nvidia's and open source audio models.",
+      ]
+    },
+    {
+      company: "iNeuron.ai",
+      href: "",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Data Science Intern",
+      logoUrl: "/ineuron.png",
+      start: "August, 2022",
+      end: "November, 2022",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        [
+          "Built a stock price prediction model using Machine Learning. Developed the pipeline using Machine Learning algorithms like Decision Tree and XGBoost",
+          "Built a sentiment classification system using NLP and Logistic Regression, using twitter data."
+        ]
     },
     {
-      company: "Shopify",
+      company: "Indian Institute of Technology, Bombay",
+      href: "",
       badges: [],
-      href: "https://shopify.com",
       location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
-      description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
-    },
-    {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
-      badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
-      description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+      title: "Flutter Developer Intern",
+      logoUrl: "/iitb.png",
+      start: "January, 2022",
+      end: "June, 2022",
+      description:[]
     },
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
-      end: "2024",
+      school: "Haldia Institute of Technology",
+      href: "#",
+      location: "Haldia, West Bengal",
+      degree: "B.Tech CSE",
+      logoUrl: "/hit.png",
+      start: "2019",
+      end: "2023",
     },
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
+      school: "Sri Chaitanya Educational Institution, Visakhapatnam",
+      href: "#",
+      location: "Visakhapatnam, Andhra Pradesh",
+      degree: "Higher Secondary, PCM",
+      logoUrl: "",
+      start: "2017",
+      end: "2019",
     },
     {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
+      school: "De Paul School, Visakhapatnam",
+      href: "https://depaulsvizag.com/",
+      location: "Visakhapatnam, Andhra Pradesh",
+      degree: "Secondary Education",
+      logoUrl: "/depaul.png",
+      start: "2013",
+      end: "2017",
     },
   ],
   gallery: [
@@ -195,21 +182,20 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Qwen Mental Health Chatbot System",
+      href: "#",
+      dates: "July 2025 - September 2025",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Finetuned the [Qwen 3 4B Thinking](https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507) model using an open-sourced [Mental Health dataset from Huggingface](https://huggingface.co/datasets/DenCT/mental-health-conversation-sft-12k). Built a FastAPI application to wrap the fine-tuned model with performant inference server and memory to persist user conversations. Added Patient, Cases and User handling to create an End-to-end mental health chatbot application.",
       technologies: [
-        "Next.js",
-        "Typescript",
+        "Python",
+        "PyTorch",
+        "HuggingFace",
+        "FastAPI",
+        "TypeScript",
         "PostgreSQL",
-        "Prisma",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
@@ -217,10 +203,20 @@ export const DATA = {
           href: "https://chatcollect.com",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Github (UI)",
+          href: "https://github.com/Subhadeep0506/medichat-insight-bubble/",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Github (FastAPI)",
+          href: "https://github.com/Subhadeep0506/qwen-3-mental-health-chatbot-fastapi",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
-      image: "",
+      image: "/proj-1.png",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "",
     },
     {
       title: "Magic UI",
@@ -319,430 +315,107 @@ export const DATA = {
   ],
   certifications: [
     {
-      title: "AWS Certified Solutions Architect – Associate",
-      issuer: "Amazon Web Services",
-      date: "2024-02-10",
-      href: "https://www.credly.com/badges/example-aws-solutions-architect",
+      logoUrl: "https://cdn.brandfetch.io/idou89mSUh/w/400/h/400/theme/dark/icon.jpeg",
+      title: "Fully Automated MLOps",
+      issuer: "Datacamp",
+      date: "2024-09-10",
+      href: "https://www.datacamp.com/completed/statement-of-accomplishment/course/8d6a76254bb9432c8ab4b1fe10c59ef9f03cd942",
     },
     {
-      title: "Google Professional Cloud Architect",
+      logoUrl: "https://cdn.brandfetch.io/idou89mSUh/w/400/h/400/theme/dark/icon.jpeg",
+      title: "MLOps Concepts",
+      issuer: "Datacamp",
+      date: "2024-09-10",
+      href: "https://www.datacamp.com/completed/statement-of-accomplishment/course/6d596877222785c52dc98dec86a27a10f61d16ab",
+    },
+    {
+      logoUrl: "https://cdn.brandfetch.io/idou89mSUh/w/400/h/400/theme/dark/icon.jpeg",
+      title: "MLOps Deployment and Life Cycling",
+      issuer: "Datacamp",
+      date: "2024-09-10",
+      href: "https://www.datacamp.com/completed/statement-of-accomplishment/course/4688003c4f6f1dfce94fbd8f792703302044bba2",
+    },
+    {
+      logoUrl: "https://cdn.brandfetch.io/idou89mSUh/w/400/h/400/theme/dark/icon.jpeg",
+      title: "Data Scientist with Python",
+      issuer: "Datacamp",
+      date: "2022-06-10",
+      href: "https://www.datacamp.com/statement-of-accomplishment/track/c6851da56d2ab55ed1f395e2a9f211633b4803ce",
+    },
+    {
+      logoUrl: "https://cdn.brandfetch.io/idou89mSUh/w/400/h/400/theme/dark/icon.jpeg",
+      title: "Data Manupulation with Python",
+      issuer: "Datacamp",
+      date: "2022-07-10",
+      href: "https://www.datacamp.com/statement-of-accomplishment/track/88c1dcd1e55eef05fc7110e7e36c45e4e4bbdd89",
+    },
+    {
+      logoUrl: "https://cdn.brandfetch.io/idAaZ51xKa/w/176/h/176/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1717321002978",
+      title: "Deep Learning with PyTorch: Zero to GANs",
+      issuer: "Jovian",
+      date: "2023-07-10",
+      href: "https://jovian.com/certificate/MFQTQNZWGQ",
+    },
+    {
+      logoUrl: "https://cdn.brandfetch.io/idAaZ51xKa/w/176/h/176/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1717321002978",
+      title: "Machine Learning with Python: Zero to GBMs",
+      issuer: "Jovian",
+      date: "2023-03-10",
+      href: "https://jovian.com/certificate/MFQTQMZTGE",
+    },
+    {
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png",
+      title: "Google Cloud Training - Cloud Engineering Fundamentals, Cloud Application Development, Cloud ML-AI Google Cloud Training - Cloud Engineering Fundamentals, Cloud Application Development",
       issuer: "Google Cloud",
-      date: "2023-11-20",
-      href: "https://www.credential.net/example-google-pca",
+      date: "2021-04-10",
+      href: "https://google.qwiklabs.com/public_profiles/6c8e954e-4b8d-44ff-8636-200446b489d2",
     },
     {
-      title: "Meta Front-End Developer Professional Certificate",
-      issuer: "Meta",
-      date: "2022-08-01",
-      href: "https://www.coursera.org/account/accomplishments/specialization/example-meta-frontend",
+      logoUrl: "https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg",
+      title: "Java Programming: Problem Solving with Software",
+      issuer: "Coursera",
+      date: "2020-06-10",
+      href: "https://coursera.org/verify/XH5WH45XNJVZ",
     },
   ],
   publications: [
     {
-      title: "Understanding React Server Components in Next.js 14",
-      date: "2024-07-12",
+      title: "Building a Multi-Vector Chatbot with LangChain, Milvus, and Cohere",
+      date: "2024-12-04",
       description:
-        "A deep dive into how RSC works under the hood, rendering boundaries, and patterns for mixing client components with server components effectively.",
-      href: "https://example.com/blog/react-server-components-next14",
+        "In the fast-growing area of digital healthcare, medical chatbots are becoming an important tool for improving patient care and providing quick, reliable information. This article explains how to build a medical chatbot that uses multiple vectorstores. It focuses on creating a chatbot that can understand medical reports uploaded by users and give answers based on the information in these reports. Additionally, this chatbot uses another vectorstore filled with conversations between doctors and patients about different medical issues. This approach allows the chatbot to have a wide range of medical knowledge and patient interaction examples, helping it give personalized and relevant answers to user questions. The goal of this article is to offer developers and healthcare professionals a clear guide on how to develop a medical chatbot that can be a helpful resource for patients looking for information and advice based on their own health reports and concerns.",
+      href: "https://www.analyticsvidhya.com/blog/2024/12/multi-vector-chatbot/",
     },
     {
-      title: "Optimizing TailwindCSS for Production at Scale",
-      date: "2023-10-05",
+      title: "Self Hosting RAG Applications On Edge Devices with Langchain and Ollama–Part II",
+      date: "2024-08-27",
       description:
-        "Techniques to keep CSS bundles tiny using content-aware purging, component-driven design, and performance budgeting for large apps.",
-      href: "https://example.com/blog/optimizing-tailwindcss",
+        "In the second part of our series on building a RAG application on a Raspberry Pi, we’ll expand on the foundation we laid in the first part, where we created and tested the core pipeline. In the first part, we created the core pipeline and tested it to ensure everything worked as expected. Now, we’re going to take things a step further by building a FastAPI application to serve our RAG pipeline and creating a Reflex app to give users a simple and interactive way to access it. This part will guide you through setting up the FastAPI back-end, designing the front-end with Reflex, and getting everything up and running on your Raspberry Pi. By the end, you’ll have a complete, working application that’s ready for real-world use.",
+      href: "https://www.analyticsvidhya.com/blog/2024/08/self-hosting-rag-applications-on-edge-devices-with-langchain-and-ollama-part-ii/",
     },
     {
-      title: "A Lightweight Pattern for Type-Safe APIs with Zod",
-      date: "2023-04-18",
-      description:
-        "How to design end-to-end type-safe API contracts using Zod schemas, with examples spanning validation, inference, and error shaping.",
-      href: "https://example.com/blog/type-safe-apis-with-zod",
-    },
-  ],
-  hackathons: [
-    {
-      title: "Hack Western 5",
-      dates: "November 23rd - 25th, 2018",
-      location: "London, Ontario",
-      description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
+      title: "Self Hosting RAG Applications On Edge Devices with Langchain and Ollama – Part I",
+      date: "2024-08-01",
+      description: "This article follows that journey, showing how to transform this small device into a capable tool for smart document processing. We’ll guide you through setting up the Raspberry Pi, installing the needed software, and building a system to handle document ingestion and QnA tasks. By the end, you’ll see how even the smallest tech gadgets can achieve impressive results with a bit of creativity and effort.",
+      href: "https://www.analyticsvidhya.com/blog/2024/08/self-hosting-rag-applications-on-edge-devices/",
     },
     {
-      title: "Hack The North",
-      dates: "September 14th - 16th, 2018",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a mobile application which delivers university campus wide events in real time to all students.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
+      title: "RAG Application using Cohere Command-R and Rerank – Part 2",
+      date: "2024-06-03",
+      description: "In the previous article, we experimented with Cohere’s Command-R model and Rerank model to generate responses and rerank doc sources. We have implemented a simple RAG pipeline using them to generate responses to user’s questions on ingested documents. However, what we have implemented is very simple and unsuitable for the general user, as it has no user interface to interact with the chatbot directly. In this article, we will modularize the codebase for easy interpretation and scaling and build a Streamlit application that will serve as an interface to interact with the RAG pipeline. The interface will be a chatbot interface that the user can use to interact with it. So, we will implement an additional memory component within the application, allowing users to ask follow-up queries on previous responses.",
+      href: "https://www.analyticsvidhya.com/blog/2024/06/rag-application-using-cohere-command-r-and-rerank/",
     },
     {
-      title: "FirstNet Public Safety Hackathon",
-      dates: "March 23rd - 24th, 2018",
-      location: "San Francisco, California",
-      description:
-        "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
-      icon: "public",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
-      links: [],
+      title: "RAG Application with Cohere Command-R and Rerank – Part 1",
+      date: "2024-05-07",
+      description: "The Retrieval-Augmented Generation approach combines LLMs with a retrieval system to improve response quality. However, inaccurate retrieval can lead to sub-optimal responses. Cohere’s re-ranker model enhances this process by evaluating and ordering search results based on contextual relevance, improving accuracy and saving time for specific information seekers. This article provides a guide on implementing Cohere command re-ranker model for document re-ranking, comparing its effectiveness with and without the re-ranker. It uses a pipeline to demonstrate both scenarios, providing insights into how the re-ranker model can streamline information retrieval and improve search tasks.",
+      href: "https://www.analyticsvidhya.com/blog/2024/05/rag-application-with-cohere-command-r-and-rerank/",
     },
     {
-      title: "DeveloperWeek Hackathon",
-      dates: "February 3rd - 4th, 2018",
-      location: "San Francisco, California",
-      description:
-        "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
-      links: [
-        {
-          title: "Github",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
-        },
-      ],
-    },
-    {
-      title: "HackDavis",
-      dates: "January 20th - 21st, 2018",
-      location: "Davis, California",
-      description:
-        "Developed a mobile application which allocates a daily carbon emission allowance to users to move towards a sustainable environment.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-davis.png",
-      win: "Best Data Hack",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/my6footprint",
-        },
-        {
-          title: "ML",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/my6footprint-machine-learning",
-        },
-        {
-          title: "iOS",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/CarbonWallet",
-        },
-        {
-          title: "Server",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/wallet6-server",
-        },
-      ],
-    },
-    {
-      title: "ETH Waterloo",
-      dates: "October 13th - 15th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a blockchain application for doctors and pharmacists to perform trustless transactions and prevent overdosage in patients.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/eth-waterloo.png",
-      links: [
-        {
-          title: "Organization",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/ethdocnet",
-        },
-      ],
-    },
-    {
-      title: "Hack The North",
-      dates: "September 15th - 17th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a virtual reality application allowing users to see themselves in third person.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Streamer Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/htn2017",
-        },
-        {
-          title: "Client Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/RTSPClient",
-        },
-      ],
-    },
-    {
-      title: "Hack The 6ix",
-      dates: "August 26th - 27th, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed an open platform for people shipping items to same place to combine shipping costs and save money.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-6ix.jpg",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/ShareShip/ShareShip",
-        },
-        {
-          title: "Site",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://share-ship.herokuapp.com/",
-        },
-      ],
-    },
-    {
-      title: "Stupid Hack Toronto",
-      dates: "July 23rd, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a chrome extension which tracks which facebook profiles you have visited and immediately texts your girlfriend if you visited another girls page.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/stupid-hackathon.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/nsagirlfriend/nsagirlfriend",
-        },
-      ],
-    },
-    {
-      title: "Global AI Hackathon - Toronto",
-      dates: "June 23rd - 25th, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a python library which can be imported to any python game and change difficulty of the game based on real time emotion of player. Uses OpenCV and webcam for facial recognition, and a custom Machine Learning Model trained on a [Kaggle Emotion Dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard) using [Tensorflow](https://www.tensorflow.org/Tensorflow) and [Keras](https://keras.io/). This project recieved 1st place prize at the Global AI Hackathon - Toronto and was also invited to demo at [NextAI Canada](https://www.nextcanada.com/next-ai).",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/global-ai-hackathon.jpg",
-      win: "1st Place Winner",
-      links: [
-        {
-          title: "Article",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://syncedreview.com/2017/06/26/global-ai-hackathon-in-toronto/",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/TinySamosas/",
-        },
-      ],
-    },
-    {
-      title: "McGill AI for Social Innovation Hackathon",
-      dates: "June 17th - 18th, 2017",
-      location: "Montreal, Quebec",
-      description:
-        "Developed realtime facial microexpression analyzer using AI",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/ai-for-social-good.jpg",
-      links: [],
-    },
-    {
-      title: "Open Source Circular Economy Days Hackathon",
-      dates: "June 10th, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a custom admin interface for food waste startup <a href='http://genecis.co/'>Genecis</a> to manage their data and provide analytics.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/open-source-circular-economy-days.jpg",
-      win: "1st Place Winner",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/genecis",
-        },
-      ],
-    },
-    {
-      title: "Make School's Student App Competition 2017",
-      dates: "May 19th - 21st, 2017",
-      location: "International",
-      description: "Improved PocketDoc and submitted to online competition",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/make-school-hackathon.png",
-      win: "Top 10 Finalist | Honourable Mention",
-      links: [
-        {
-          title: "Medium Article",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a",
-        },
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "HackMining",
-      dates: "May 12th - 14th, 2017",
-      location: "Toronto, Ontario",
-      description: "Developed neural network to optimize a mining process",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-mining.png",
-      links: [],
-    },
-    {
-      title: "Waterloo Equithon",
-      dates: "May 5th - 7th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed Pocketdoc, an app in which you take a picture of a physical wound, and the app returns common solutions or cures to the injuries or diseases.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/waterloo-equithon.png",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "SpaceApps Waterloo",
-      dates: "April 28th - 30th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed Earthwatch, a web application which allows users in a plane to virtually see important points of interest about the world below them. They can even choose to fly away from their route and then fly back if they choose. Special thanks to CesiumJS for providing open source world and plane models.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/space-apps.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/earthwatch",
-        },
-      ],
-    },
-    {
-      title: "MHacks 9",
-      dates: "March 24th - 26th, 2017",
-      location: "Ann Arbor, Michigan",
-      description:
-        "Developed Super Graphic Air Traffic, a VR website made to introduce people to the world of air traffic controlling. This project was built completely using THREE.js as well as a node backend server.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/mhacks-9.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/threejs-planes",
-        },
-      ],
-    },
-    {
-      title: "StartHacks I",
-      dates: "March 4th - 5th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed at StartHacks 2017, Recipic is a mobile app which allows you to take pictures of ingredients around your house, and it will recognize those ingredients using ClarifAI image recognition API and return possible recipes to make. Recipic recieved 1st place at the hackathon for best pitch and hack.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/starthacks.png",
-      win: "1st Place Winner",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-ionic",
-        },
-        {
-          title: "Source (Server)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-rails",
-        },
-      ],
-    },
-    {
-      title: "QHacks II",
-      dates: "February 3rd - 5th, 2017",
-      location: "Kingston, Ontario",
-      description:
-        "Developed a mobile game which enables city-wide manhunt with random lobbies",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/human-huntr-react-native",
-        },
-        {
-          title: "Source (API)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/human-huntr-rails",
-        },
-      ],
-    },
-    {
-      title: "Terrible Hacks V",
-      dates: "November 26th, 2016",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a mock of Windows 11 with interesting notifications and functionality",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
-        },
-      ],
-    },
-    {
-      title: "Portal Hackathon",
-      dates: "October 29, 2016",
-      location: "Kingston, Ontario",
-      description:
-        "Developed an internal widget for uploading assignments using Waterloo's portal app",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/UWPortalSDK/crowmark",
-        },
-      ],
+      title: "A Beginner’s Guide to Evaluating RAG Pipelines Using RAGAS",
+      date: "2024-05-07",
+      description: "In the ever-evolving landscape of machine learning and artificial intelligence, the development of language model applications, particularly Retrieval Augmented Generation (RAG) systems, is becoming increasingly sophisticated. However, the real challenge surfaces not during the initial creation but in the ongoing maintenance and enhancement of these applications. This is where RAGAS—an evaluation library dedicated to providing metrics for RAG pipelines—comes into play. This article will explore the RAGAS library and teach you how to use it to evaluate RAG pipelines.",
+      href: "https://www.analyticsvidhya.com/blog/2024/05/a-beginners-guide-to-evaluating-rag-pipelines-using-ragas/",
     },
   ],
 } as const;

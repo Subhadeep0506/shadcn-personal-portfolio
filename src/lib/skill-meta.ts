@@ -78,6 +78,32 @@ export function hexToRgb(hex: string) {
   return { r, g, b };
 }
 
+export function rgbToHex(r: number, g: number, b: number) {
+  const toHex = (n: number) => {
+    const clamped = Math.max(0, Math.min(255, Math.round(n)));
+    return clamped.toString(16).padStart(2, '0');
+  };
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+}
+
+export function mix(hex1: string, hex2: string, weight: number) {
+  const w = Math.max(0, Math.min(1, weight));
+  const a = hexToRgb(hex1);
+  const b = hexToRgb(hex2);
+  const r = a.r * (1 - w) + b.r * w;
+  const g = a.g * (1 - w) + b.g * w;
+  const bl = a.b * (1 - w) + b.b * w;
+  return rgbToHex(r, g, bl);
+}
+
+export function lighten(hex: string, amount: number) {
+  return mix(hex, '#ffffff', amount);
+}
+
+export function darken(hex: string, amount: number) {
+  return mix(hex, '#000000', amount);
+}
+
 export function rgba(hex: string, alpha: number) {
   const { r, g, b } = hexToRgb(hex);
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;
@@ -86,5 +112,5 @@ export function rgba(hex: string, alpha: number) {
 export function readableTextColor(hex: string) {
   const { r, g, b } = hexToRgb(hex);
   const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-  return luminance > 0.6 ? "#111827" : "#F9FAFB"; // slate-900 or gray-50
+  return luminance > 0.6 ? "#111827" : "#F9FAFB";
 }

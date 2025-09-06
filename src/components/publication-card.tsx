@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { Calendar, ChevronDown } from "lucide-react";
 import React from "react";
+import { handleCardMouseMove, handleCardMouseLeave } from "@/lib/mouse";
 import { toISODate } from "@/lib/date";
 
 export default function PublicationCard({
@@ -21,7 +22,7 @@ export default function PublicationCard({
 }) {
   const [open, setOpen] = React.useState(false);
   return (
-    <div className="glass-card p-4">
+    <div className="glass-card p-4" onMouseMove={handleCardMouseMove} onMouseLeave={handleCardMouseLeave}>
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-semibold leading-none text-sm sm:text-base">{title}</h3>

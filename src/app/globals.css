@@ -193,7 +193,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(600px 200px at 20% 0%, rgba(255,255,255,0.25), transparent 60%);
+  background: radial-gradient(240px 240px at var(--mx, 20%) var(--my, 0%), rgba(255,255,255,0.25), transparent 60%);
   opacity: 0.25;
   pointer-events: none;
   transition: opacity 300ms ease;

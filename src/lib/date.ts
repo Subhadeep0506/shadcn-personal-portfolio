@@ -5,6 +5,12 @@ export function toISODate(input: string | number | Date): string {
   return d.toISOString().slice(0, 10);
 }
 
+export function yearShort(input: string | number | Date): string {
+  const d = new Date(input);
+  const y = d.getFullYear();
+  return y.toString() ?? "";
+}
+
 export function monthShort(input: string | number | Date): string {
   const d = new Date(input);
   const m = d.getUTCMonth();

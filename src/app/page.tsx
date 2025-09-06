@@ -71,6 +71,7 @@ export default function Page() {
             >
               <ResumeCard
                 key={work.company}
+                location={work.location}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -101,6 +102,7 @@ export default function Page() {
                 altText={education.school}
                 title={education.school}
                 subtitle={education.degree}
+                location={education.location}
                 period={`${education.start} - ${education.end}`}
               />
             </BlurFade>
@@ -180,7 +182,7 @@ export default function Page() {
             <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {DATA.certifications?.map((cert, id) => (
                 <BlurFade key={cert.title + cert.date} delay={BLUR_FADE_DELAY * 15 + id * 0.05}>
-                  <CertificationCard title={cert.title} date={cert.date} href={cert.href} issuer={cert.issuer} />
+                  <CertificationCard title={cert.title} date={cert.date} href={cert.href} issuer={cert.issuer} logoUrl={cert.logoUrl} />
                 </BlurFade>
               ))}
             </ul>

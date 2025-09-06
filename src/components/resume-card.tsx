@@ -4,25 +4,28 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Calendar, ChevronRightIcon } from "lucide-react";
+import { Calendar, ChevronRightIcon, Dot } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { handleCardMouseMove, handleCardMouseLeave } from "@/lib/mouse";
 
 interface ResumeCardProps {
   logoUrl: string;
   altText: string;
   title: string;
   subtitle?: string;
+  location?: string;
   href?: string;
   badges?: readonly string[];
   period: string;
-  description?: string;
+  description?: string | readonly string[];
 }
 export const ResumeCard = ({
   logoUrl,
   altText,
   title,
   subtitle,
+  location,
   href,
   badges,
   period,
@@ -39,7 +42,7 @@ export const ResumeCard = ({
 
   return (
     <Link href={href || "#"} className="block cursor-pointer" onClick={handleClick}>
-      <div className="glass-card group flex rounded-xl p-4">
+      <div className="glass-card group flex rounded-xl p-4" onMouseMove={handleCardMouseMove} onMouseLeave={handleCardMouseLeave}>
         <span className="glass-card-shine" aria-hidden="true" />
         <div className="flex-none">
           <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
@@ -68,9 +71,15 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right inline-flex items-center gap-1"><Calendar className="size-3.5" />{period}</div>
+              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right inline-flex items-center gap-1"><Calendar className="size-3.5" />
+              {period}
+              </div>
             </div>
-            {subtitle && <div className="font-sans text-xs mt-1">{subtitle}</div>}
+            <div className="flex flex-row gap-1">
+              {subtitle && <div className="font-sans text-xs mt-1">{subtitle}</div>}
+              <Dot/>
+              {location && <div className="font-sans text-xs mt-1">{location}</div>}
+            </div>
           </div>
           {description && (
             <motion.div
@@ -79,7 +88,27 @@ export const ResumeCard = ({
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="mt-2 text-xs sm:text-sm"
             >
-              {description}
+              {Array.isArray(description) ? (
+                <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                  {description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              ) : (
+                (() => {
+                  const parts = String(description)
+                    .split(/\n+|\.\s+|;\s+/)
+                    .map((s) => s.trim())
+                    .filter(Boolean);
+                  return (
+                    <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
+                      {parts.map((p, i) => (
+                        <li key={i}>{/\.$/.test(p) ? p : `${p}.`}</li>
+                      ))}
+                    </ul>
+                  );
+                })()
+              )}
             </motion.div>
           )}
         </div>
