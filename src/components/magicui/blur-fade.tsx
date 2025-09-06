@@ -3,6 +3,15 @@
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 
+type MarginObject = {
+  top?: number;
+  right?: number;
+  bottom?: number;
+  left?: number;
+};
+
+type MarginInput = string | number | MarginObject;
+
 interface BlurFadeProps {
   children: React.ReactNode;
   className?: string;
@@ -14,9 +23,34 @@ interface BlurFadeProps {
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: string;
+  inViewMargin?: MarginInput;
   blur?: string;
 }
+
+function toRootMarginString(margin: MarginInput | undefined): string | undefined {
+  if (margin == null) return undefined;
+  if (typeof margin === "string") {
+    const parts = margin.trim().split(/\s+/);
+    if (parts.length === 1) {
+      const v = parts[0];
+      if (/(px|%)$/.test(v)) return `0px 0px ${v} 0px`;
+      const n = parseFloat(v);
+      if (!isNaN(n)) return `0px 0px ${n}px 0px`;
+      return undefined;
+    }
+    return margin;
+  }
+  if (typeof margin === "number") {
+    const v = `${margin}px`;
+    return `${v} ${v} ${v} ${v}`;
+  }
+  const top = `${margin.top ?? 0}px`;
+  const right = `${margin.right ?? 0}px`;
+  const bottom = `${margin.bottom ?? 0}px`;
+  const left = `${margin.left ?? 0}px`;
+  return `${top} ${right} ${bottom} ${left}`;
+}
+
 const BlurFade = ({
   children,
   className,
@@ -29,11 +63,10 @@ const BlurFade = ({
   blur = "6px",
 }: BlurFadeProps) => {
   const ref = useRef(null);
-  const normalizedMargin =
-    typeof inViewMargin === "string"
-      ? { top: inViewMargin, right: inViewMargin, bottom: inViewMargin, left: inViewMargin } as any
-      : inViewMargin;
-  const inViewResult = useInView(ref, { once: true, margin: normalizedMargin });
+
+  const rootMargin = toRootMarginString(inViewMargin);
+
+  const inViewResult = useInView(ref, { once: true, margin: rootMargin as any });
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },

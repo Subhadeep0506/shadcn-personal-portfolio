@@ -21,7 +21,7 @@ export default function GalleryGrid({ items: initialItems }: Props) {
 
   return (
     <div className="space-y-4">
-      <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">Gallery</div>
+      <div className="inline-block rounded-md bg-foreground text-background px-3 py-1 text-sm">Gallery</div>
 
       <Reorder.Group
         axis="y"
@@ -45,7 +45,7 @@ export default function GalleryGrid({ items: initialItems }: Props) {
           );
 
           const inner = (
-            <div className="overflow-hidden rounded-2xl">
+            <div className="overflow-hidden rounded-md">
               {content}
             </div>
           );
