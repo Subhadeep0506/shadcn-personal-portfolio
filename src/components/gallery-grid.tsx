@@ -1,19 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { DATA } from "@/data/resume";
 import React from "react";
 import { Reorder, motion } from "framer-motion";
 
-type GalleryItem = (typeof DATA.gallery)[number] & { __id: string };
+type GalleryItem = { src?: string; alt?: string; color?: string; height?: number; href?: string; __id: string };
 
-function toItems(): GalleryItem[] {
-  const base = DATA.gallery ?? [];
-  return base.map((it, i) => ({ ...it, __id: `${it.src ?? it.color ?? "item"}-${i}` }));
-}
+type Props = { items: Omit<GalleryItem, "__id">[] };
 
-export default function GalleryGrid() {
-  const [items, setItems] = React.useState<GalleryItem[]>(toItems());
+export default function GalleryGrid({ items: initialItems }: Props) {
+  const withIds = React.useMemo<GalleryItem[]>(
+    () => initialItems.map((it, i) => ({ ...it, __id: `${it.src ?? it.color ?? "item"}-${i}` })),
+    [initialItems]
+  );
+  const [items, setItems] = React.useState<GalleryItem[]>(withIds);
+
+  React.useEffect(() => {
+    setItems(withIds);
+  }, [withIds]);
 
   return (
     <div className="space-y-4">

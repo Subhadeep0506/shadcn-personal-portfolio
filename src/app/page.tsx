@@ -55,7 +55,7 @@ export default function Page() {
       <section id="gallery">
         <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
           <div className="w-full">
-            <GalleryGrid />
+            <GalleryGrid items={DATA.gallery as any}/>
           </div>
         </BlurFade>
       </section>

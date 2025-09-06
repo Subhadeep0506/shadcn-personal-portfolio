@@ -1,4 +1,45 @@
 import { Icons } from "@/components/icons";
+import fs from "fs";
+import path from "path";
+
+const IMAGE_EXTS = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".svg", ".avif"]);
+
+function extractIndex(filename: string) {
+  const match = filename.match(/(\d+)/g);
+  if (!match) return Number.MAX_SAFE_INTEGER;
+  return parseInt(match[match.length - 1] || "0", 10);
+}
+
+function listGalleryImages() {
+  const publicDir = path.join(process.cwd(), "public");
+  const candidateDirs = ["gallery", path.join("assets", "gallery")];
+  const items: { src: string; alt: string }[] = [];
+
+  for (const dir of candidateDirs) {
+    const full = path.join(publicDir, dir);
+    if (!fs.existsSync(full)) continue;
+    const names = fs.readdirSync(full, { withFileTypes: true })
+      .filter((d) => d.isFile())
+      .map((d) => d.name)
+      .filter((name) => IMAGE_EXTS.has(path.extname(name).toLowerCase()));
+
+    const sorted = names.sort((a, b) => {
+      const ia = extractIndex(a);
+      const ib = extractIndex(b);
+      if (ia === ib) return a.localeCompare(b);
+      return ia - ib;
+    });
+
+    for (const name of sorted) {
+      const src = `/${dir}/${name}`.replace(/\\/g, "/");
+      const base = name.replace(path.extname(name), "");
+      const alt = base.replace(/[-_]+/g, " ").trim();
+      if (!items.find((it) => it.src === src)) items.push({ src, alt });
+    }
+  }
+  return items;
+}
+
 
 export const DATA = {
   name: "Subhadeep Mandal",
@@ -169,17 +210,7 @@ export const DATA = {
       end: "2017",
     },
   ],
-  gallery: [
-    { color: "linear-gradient(135deg,#fda4af,#fecaca)", height: 180 },
-    { color: "linear-gradient(135deg,#bfdbfe,#93c5fd)", height: 280 },
-    { color: "linear-gradient(135deg,#c7d2fe,#a5b4fc)", height: 220 },
-    { color: "linear-gradient(135deg,#bbf7d0,#86efac)", height: 320 },
-    { color: "linear-gradient(135deg,#fed7aa,#fdba74)", height: 200 },
-    { color: "linear-gradient(135deg,#f5d0fe,#e9d5ff)", height: 240 },
-    { color: "linear-gradient(135deg,#fde68a,#facc15)", height: 180 },
-    { color: "linear-gradient(135deg,#bae6fd,#7dd3fc)", height: 260 },
-    { color: "linear-gradient(135deg,#fecdd3,#fda4af)", height: 210 }
-  ],
+  gallery: listGalleryImages(),
   projects: [
     {
       title: "Qwen Mental Health Chatbot System",
