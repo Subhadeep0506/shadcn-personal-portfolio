@@ -32,7 +32,14 @@ export default function GalleryGrid({ items: initialItems }: Props) {
         {items.map((item) => {
           const content = item.src ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={item.src} alt={item.alt || ""} loading="lazy" className="w-full h-auto block" />
+            <img
+              src={item.src}
+              alt={item.alt || ""}
+              loading="lazy"
+              className="w-full h-auto block select-none [-webkit-user-drag:none]"
+              draggable={false}
+              onDragStart={(e) => e.preventDefault()}       
+            />
           ) : (
             <div className="w-full" style={{ background: item.color || "#e5e7eb", height: item.height || 160 }} />
           );
@@ -52,7 +59,9 @@ export default function GalleryGrid({ items: initialItems }: Props) {
               className="cursor-grab active:cursor-grabbing"
             >
               {item.href ? (
-                <Link href={item.href} target="_blank">{inner}</Link>
+                <Link href={item.href} target="_blank" draggable={false} onDragStart={(e) => e.preventDefault()}>
+                  {inner}
+                </Link>
               ) : (
                 inner
               )}
@@ -67,6 +76,7 @@ export default function GalleryGrid({ items: initialItems }: Props) {
               drag
               dragElastic={0.3}
               dragMomentum={false}
+              layout
               transition={{ type: "spring", stiffness: 170, damping: 14 }}
               className="mb-[6px] break-inside-avoid"
             >
