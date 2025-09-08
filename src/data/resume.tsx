@@ -48,7 +48,7 @@ export const DATA = {
   location: "Bengaluru, KA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Data Scientist and AI/ML Engineer. I love building things and helping people. Very active on Reddit.",
+    "Data Scientist and AI/ML Engineer. I love building things and helping people. Very active on twitter.",
   summary:
     "A self taught data scientist and machine learning engineer with a background in [Computer Science Engineering](/#education) and over 2 years of experience in the AI/ML industry. My work interests include Applied Machine and Deep Learning, Generative AI, Reinforcement Learning and MLOps. At [Genpact](https://www.genpact.com/), I am working with the AI/ML Practice team to develop cutting edge solutions leveraging Generative AI. I also engage myself in developing custom finetuned Vision, Language and Multimodal solutions for variety of usecases in Healthcare, Manufacturing, Finance and Retail. As a part of R&D I participate in [publishing our research](/#publications) work at top conferences and also patenting solutions with the core team.",
   avatarUrl: "/me.png",
@@ -98,12 +98,6 @@ export const DATA = {
         url: "https://x.com/syntax_terror_",
         icon: Icons.x,
 
-        navbar: true,
-      },
-      Reddit: {
-        name: "Reddit",
-        url: "https://www.reddit.com/user/Extension-Tap-7488/",
-        icon: Icons.reddit,
         navbar: true,
       },
       email: {
